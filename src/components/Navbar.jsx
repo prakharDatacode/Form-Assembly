@@ -69,7 +69,7 @@ const Navbar = () => {
         {/* Buttons Block */}
         <div className="btn-block d-flex">
           <button className="btn btn-primary demo-btn me-2">Book a Demo</button>
-          <button className="btn btn-outline-primary login-btn">Login</button>
+          <button className=" login-btn">Login</button>
         </div>
       </div>
     </nav>

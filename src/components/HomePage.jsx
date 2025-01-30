@@ -7,6 +7,7 @@ import expert from "/src/assets/images/expert.png";
 import collect from "/src/assets/images/collect.png";
 import connect from "/src/assets/images/connect.png";
 import protect from "/src/assets/images/protect.png";
+import check from "/src/assets/images/check-circle.svg";
 
 const industries = [
   {
@@ -154,24 +155,46 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="industry-section col-12">
+      <div className="industry-section col-12 px-3">
         <div className="container py-3">
-          <h1 className="text-center text-dark">
-            Build forms that build your business
-          </h1>
+          <h1 className="text-center ">Build forms that build your business</h1>
           <div className="cards row g-4 mt-4">
             {industries.map((industry, index) => (
               <div
                 key={index}
                 className="col-12 col-md-6 col-lg-4 d-flex justify-content-center"
               >
-                <div className="custom-card card p-4">
+                <div className=" card p-4">
                   <h3 className="fw-bold">{industry.title}</h3>
                   <p>{industry.description}</p>
                   <Button className="custoume-btn">Learn More</Button>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+      <div className="col-12 form-benefits py-5 px-5">
+        <div className="inner-form-benefits px-5">
+          <div className="form-benefits-content ">
+            <div className="form-benefits-title px-5">
+              <h1>
+                Going digital should drive your business forward, not hold it
+                back
+              </h1>
+            </div>
+            <div className="form-benefits-subtext px-5">
+              <span>
+                Break free from web form limits and collect the data you need to
+                run your business, serve your customers, and achieve your goals.
+              </span>
+            </div>
+            <div className="form-benefits-check px-5">
+                <span><img src={check} height={25} alt="" />hello</span>
+            </div>
+            <div className="form-benefits-btn px-5">
+              <Button className="custoume-btn">Talk to an Expert</Button>
+            </div>
           </div>
         </div>
       </div>

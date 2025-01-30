@@ -1,12 +1,11 @@
+@import "./variables.scss";
 .navbar {
-  background-color: white;
   padding: 15px 80px;
 
   .navbar-brand {
     font-size: 1.25rem;
     font-weight: bold;
   }
-
   .navbar-nav {
     display: flex;
     gap: 120px;
@@ -17,18 +16,17 @@
       transition: color 0.3s;
 
       &:hover {
-        color: #0056b3;
+        color: $primary-color;
       }
     }
   }
-
   .btn-block {
     display: flex;
     gap: 10px;
   }
 
   .demo-btn {
-    background-color: #0569cc;
+    background-color: $primary-color;
     color: white;
     font-weight: bold;
     border-radius: 12px;
@@ -40,40 +38,51 @@
       font-size: 16px;
     }
   }
-
   .login-btn {
-    border: 1px solid #0569cc;
-    color: #007bff;
+    border: 1px solid $primary-color;
+    color: $primary-color;
     font-weight: bold;
     border-radius: 12px;
     padding: 15px 20px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth easing */
+    &:hover {
+      transform: scale(1.05);
+      font-size: 16px;
+    }
   }
 }
 .parent {
+  .heading {
+    font-size: 48px;
+    color: $heading-color;
+    font-weight: 600;
+  }
+  .custoume-btn {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 15px 20px !important;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth easing */
+    &:hover {
+      transform: scale(1.05);
+      font-size: 16px;
+    }
+  }
   .hero-section {
     margin: 50px 0px;
-    span {
-      width: 80%;
-      h1 {
-        font-weight: 600;
-        font-size: 58px;
-        color: #131d52;
-      }
-      p {
-        margin-top: 20px;
-        font-size: 18px;
-        font-weight: 400;
-        color: #38414a;
-      }
+    .heading {
+      font-size: 56px;
     }
-    button {
-      background-color: #0569cc;
-      color: white;
-      font-weight: bold;
-      border-radius: 12px;
-      padding: 15px 20px;
-      border: none;
+    p {
       margin-top: 20px;
+      font-size: 18px;
+      font-weight: 400;
+      color: $paragraph-color;
+    }
+    .custoume-btn {
+      background-color: $primary-color;
+      color: white;
       transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth easing */
       &:hover {
         transform: scale(1.05);
@@ -82,9 +91,8 @@
   }
   .brands {
     padding: 0px 20px;
-    margin-bottom: 100px;
     .brand-card {
-      background: #ffffff;
+      background: white;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       display: flex;
       justify-content: center;
@@ -92,7 +100,6 @@
       border-radius: 8px;
       height: 80px;
       align-items: center;
-
       transition: transform 0.3s ease-in-out;
       img {
         padding: 0 50px;
@@ -102,86 +109,49 @@
   .salesforce {
     padding: 0 15px;
     margin-bottom: 50px;
-    .salesforce-title {
-      width: 75%;
-      h1 {
-        font-weight: 600;
-        font-size: 48px;
-        color: #131d52;
-      }
-    }
-    .salesforce-subtext {
-      p {
-        width: 80% !important;
+    .salesforce-content {
+      .salesforce-inner-text {
         font-size: 18px;
         font-weight: 350;
       }
-    }
-    button {
-      background-color: #0569cc;
-      color: white;
-      font-weight: bold;
-      border-radius: 12px;
-      padding: 15px 20px;
-      border: none;
-      margin-top: 20px;
+      .custoume-btn {
+        background-color: $primary-color;
+        color: white;
+      }
     }
   }
   .stategy {
-    margin-bottom: 50px;
-    .strategy-title {
-      margin-bottom: 50px;
-      h1 {
-        font-size: 48px;
-        font-weight: 600;
-        color: #131d52;
-      }
-    }
     .stategy-card {
       width: 100%;
       .stategy-img {
         margin: 20px 0;
       }
       &:hover {
-        background-color: #dff0ff;
+        background-color: $hover-color;
       }
     }
   }
-  .custoume-btn {
-    border: 1px solid #0569cc;
-    color: #007bff;
-    font-weight: bold;
-    border-radius: 12px;
-    padding: 15px 20px !important;
-  }
   .industry-section {
-    background-color: #f8f1e7;
-    padding: 50px 20px;
-
-    .container {
+    background-color: $secondary-color;
+    padding: 20px 100px !important;
+    .inner-industry-section {
       padding: 0 50px;
+      margin-bottom: 30px;
       width: 100%;
-      h1 {
-        font-size: 48px;
-        font-weight: 600;
-        color: #131d52;
-      }
       .cards {
         .card {
           border: none;
           border-radius: 12px;
           padding: 10px 20px;
           p {
-            height: 100px;
+            height: 120px;
+            font-size: 17px;
+            color: $paragraph-color;
           }
           .custoume-btn {
-            width: 40%;
-            background-color: #0569cc;
+            background-color: $primary-color;
             color: white;
-            font-weight: bold;
-            border-radius: 12px;
-            border: none;
-            margin-top: 20px;
+            width: 150px;
           }
         }
       }
@@ -190,45 +160,38 @@
   .form-benefits {
     .inner-form-benefits {
       .form-benefits-content {
-        .form-benefits-title {
-          width: 50%;
-          margin-bottom: 30px;
-          h1 {
-            font-size: 48px;
-            color: #131d52;
-            font-weight: 600;
-          }
-        }
         .form-benefits-subtext {
-          width: 50%;
-          margin-bottom: 30px;
-          span {
-            font-size: 18px;
-            font-weight: 350;
-          }
+          font-size: 18px;
         }
-        .form-benefits-btn{
-          width: 40%;
-          .custoume-btn {
-            width: 40%;
-            background-color: #0569cc;
-            color: white;
-            font-weight: bold;
-            border-radius: 12px;
-            border: none;
-            margin-top: 20px;
-          }
-        }
-        .form-benefits-check{
-          span{
+        .form-benefits-check {
+          .form-check-text {
             display: flex;
             align-items: center;
             font-size: 18px;
             font-weight: 600;
-            color: #131d52;
-            img{
-              margin-right: 15px;
-            }
+            color: $heading-color;
+          }
+        }
+        .form-btn {
+          .custoume-btn {
+            background-color: $primary-color;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .form-organization {
+    background-color: $heading-color;
+    .inner-form-organization {
+      .form-org-content {
+        .form-org-heading {
+          font-size: 32px;
+        }
+        .form-org-btn {
+          .custoume-btn {
+            background-color: $primary-color;
+            color: white;
           }
         }
       }
@@ -246,7 +209,6 @@
     .navbar-collapse {
       text-align: center;
     }
-
     .btn-block {
       margin-top: 10px;
       flex-direction: column;
@@ -259,18 +221,16 @@
       }
     }
   }
-
   .parent {
+    .heading {
+      padding: 0 0 !important;
+      font-size: 32px !important;
+    }
     .hero-section {
       width: 100%;
-      span {
-        width: 100%;
-        h1 {
-          font-size: 32px;
-        }
-        p {
-          font-size: 14px;
-        }
+
+      p {
+        font-size: 14px;
       }
       img {
         margin-top: 20px;
@@ -287,18 +247,14 @@
       flex-wrap: wrap !important;
       .salesforce-content {
         width: 100%;
-        .salesforce-title {
-          width: 100%;
-          h1 {
-            width: 100%;
-            font-size: 25px;
-          }
+        .salesforce-heading {
+          padding: 0 0 !important;
+          margin: 0 0 !important;
         }
-        .salesforce-subtext {
-          p {
-            width: 100% !important;
-            font-size: 14px;
-          }
+        .salesforce-inner-text {
+          padding: 0 0 !important;
+          margin: 0 0 !important;
+          font-size: 14px;
         }
       }
       .expert-img {
@@ -314,24 +270,16 @@
       padding: 0 0 !important;
       flex-direction: column;
       .strategy-title {
-        h1 {
-          font-size: 26px;
-          font-weight: 600;
-        }
+        font-size: 26px;
+        font-weight: 600;
       }
     }
     .industry-section {
-      .container {
-        padding: 0 0;
-        h1 {
+      padding: 0 15px !important;
+      .inner-industry-section {
+        padding: 0 0 !important;
+        .heading {
           font-size: 26px;
-        }
-        .cards{
-          .card{
-            .custoume-btn{
-              width: 50%;
-            }
-          }
         }
       }
     }
@@ -340,31 +288,53 @@
     padding: 40px 0 !important;
     .inner-form-benefits {
       padding: 0 0 !important;
+      flex-direction: column !important;
       .form-benefits-content {
         padding: 0 0 !important;
         .form-benefits-title {
-          padding: 0 25px !important;
+          font-size: 28px;
+          padding: 0 15px !important;
           width: 100% !important;
-          h1 {
-            font-size: 26px !important;
-            color: #131d52;
-            font-weight: 600;
-            text-align: start;
-          }
         }
         .form-benefits-subtext {
-          padding: 0 25px !important;
-          width: 100% !important;
-          span {
-            font-size: 14px !important;
-          }
+          padding: 0 15px !important;
         }
-        .form-benefits-btn{
-          width: 100% !important;
-          padding: 0 25px !important;
-          .custoume-btn{
-            width: 50% !important;
-          }
+        .form-benefits-check {
+          padding: 0 15px !important;
+        }
+        .form-btn {
+          padding: 0 15px !important;
+        }
+      }
+      .form-table-img {
+        margin: 30px 0;
+        padding: 0 15px !important;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .form-organization {
+    padding: 30px 15px !important;
+    .inner-form-organization {
+      flex-direction: column;
+      padding: 0 15px !important;
+      .form-org-heading {
+        font-size: 22px !important;
+        padding: 0 0 !important;
+        margin: 0 0 !important;
+      }
+      .form-org-btn {
+        margin: 30px 0;
+        padding: 0 0 !important;
+      }
+      .form-org-img {
+        margin: 30px 0;
+        padding: 0 0px !important;
+        img {
+          width: 100%;
+          height: 200px;
         }
       }
     }

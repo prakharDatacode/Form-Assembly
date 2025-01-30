@@ -1,6 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "/src/assets/styles/FormAssembly.scss";
 import formAssemblyLogo from "/src/assets/images/FormAssembly-logo.svg";
 
 

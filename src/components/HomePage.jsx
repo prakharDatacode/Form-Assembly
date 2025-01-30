@@ -7,6 +7,35 @@ import expert from "/src/assets/images/expert.png";
 import collect from "/src/assets/images/collect.png";
 import connect from "/src/assets/images/connect.png";
 import protect from "/src/assets/images/protect.png";
+
+const industries = [
+  {
+    title: "Financial Services",
+    description:
+      "Process and approve claims and applications, verify and authenticate documents, and more with audit trails and secure, compliant data handling.",
+  },
+  {
+    title: "Higher Education",
+    description:
+      "Create web forms and automate approval processes that improve admissions, alumni relations, and student engagement.",
+  },
+  {
+    title: "Healthcare Organizations",
+    description:
+      "Collect and process HIPAA-compliant data for patient intake, referrals, clinical trials, medication approvals, and more.",
+  },
+  {
+    title: "Nonprofit Organizations",
+    description:
+      "Leverage branded forms to drive membership, manage volunteers, and process donations securely.",
+  },
+  {
+    title: "Government Agencies",
+    description:
+      "State and Federal agencies, collect and manage data compliantly with an authorized Cloud Service Offering (CSO).",
+  },
+];
+
 const HomePage = () => {
   return (
     <div className="row mx-0 parent">
@@ -65,7 +94,7 @@ const HomePage = () => {
               <img src={expert} height={300} alt="" />
             </div>
           </div>
-          <div className="stategy">
+          <div className="stategy px-4">
             <div className="strategy-title text-center">
               <h1>Your data collection strategy starts here</h1>
             </div>
@@ -120,6 +149,24 @@ const HomePage = () => {
                   Sapiente odio, quos incidunt ea cumque hic illo illum maiores
                 </p>
                 <Button>Protect</Button>
+              </div>
+            </div>
+          </div>
+          <div className="industry-section col-12">
+            <div className="container py-3">
+              <h1 className="text-center text-dark">
+                Build forms that build your business
+              </h1>
+              <div className=" cards row g-4 mt-4">
+                {industries.map((industry, index) => (
+                  <div key={index} className="col-12 col-md-6 col-lg-4">
+                    <div className="card p-4 shadow-sm">
+                      <h3 className="fw-bold">{industry.title}</h3>
+                      <p>{industry.description}</p>
+                      <Button className="custoume-btn">Learn More</Button>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

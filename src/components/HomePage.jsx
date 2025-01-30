@@ -152,23 +152,26 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="industry-section col-12">
-            <div className="container py-3">
-              <h1 className="text-center text-dark">
-                Build forms that build your business
-              </h1>
-              <div className=" cards row g-4 mt-4">
-                {industries.map((industry, index) => (
-                  <div key={index} className="col-12 col-md-6 col-lg-4">
-                    <div className="card p-4 shadow-sm">
-                      <h3 className="fw-bold">{industry.title}</h3>
-                      <p>{industry.description}</p>
-                      <Button className="custoume-btn">Learn More</Button>
-                    </div>
-                  </div>
-                ))}
+        </div>
+      </div>
+      <div className="industry-section col-12">
+        <div className="container py-3">
+          <h1 className="text-center text-dark">
+            Build forms that build your business
+          </h1>
+          <div className="cards row g-4 mt-4">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className="col-12 col-md-6 col-lg-4 d-flex justify-content-center"
+              >
+                <div className="custom-card card p-4">
+                  <h3 className="fw-bold">{industry.title}</h3>
+                  <p>{industry.description}</p>
+                  <Button className="custoume-btn">Learn More</Button>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

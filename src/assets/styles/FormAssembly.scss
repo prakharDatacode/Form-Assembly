@@ -156,19 +156,21 @@
   }
   .industry-section {
     background-color: #f8f1e7;
-    width: 100vw;
-    position: relative;
-    right: 12%;
-    padding: 20px 20;
+    padding: 50px 20px;
+    h1{
+      color: #131d52;
+    }
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 0 50px;
+      width: 100%;
       .cards {
-        
         .card {
+          border: none;
           border-radius: 12px;
           padding: 10px 20px;
+          p{
+            height: 100px;
+          }
           .custoume-btn {
             width: 40%;
             background-color: #0569cc;

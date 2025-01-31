@@ -56,7 +56,7 @@ const HomePage = () => {
                 worldwide
               </p>
             </div>
-            <div className="d-flex justify-content-between flex-wrap mb-5 brands ">
+            <div className="d-flex justify-content-between flex-wrap mb-5 brands">
               <div className=" px-0 brand-card ">
                 <img src={Southwest} height={60} alt="Southwest" />
               </div>
